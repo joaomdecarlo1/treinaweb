@@ -1,0 +1,87 @@
+﻿ESTRUTURA DE REPETIÇÃO - LAÇO FOR
+
+- LAÇO FOR
+# A instrução for, em conjunto com a palavra reservada in, podem ser utilizadas para navegar os elementos de uma determinada coleção de dados, atribuindo um apelido para o elemento que se encontra no processo de iteração, de forma que possamos referenciá-lo em nosso código. 
+# A instrução for pode ser utilizada para iterar sobre qualquer objeto que responda ao método each, como um Array ou um Range. 
+
+EX1:
+for animal in ['monkey','dog','cat','cow','bird']
+   puts animal
+end  
+=> monkey
+=> dog
+=> cat
+=> cow
+=> bird
+=> ["monkey", "dog", "cat", "cow", "bird"]
+
+Ex2:
+for i in 1..5
+   print i, ""
+end  
+=> 12345=> 1..5
+
+# O exemplo acima utilizou no segundo "for" uma construção do tipo Range. Um Range representa um conjunto de valores sequenciais. Exemplos de Ranges incluem a sequência de meses de Janeiro a Dezembro, os caracteres de a até z, os valores na faixa de péssimo até excelente, etc. A construção Range pode ser implementada para definir um conjunto sequencial usando a sintaxe (x..y) onde x representa o elemento inicial do conjunto e y o elemento final.
+
+Ex3:
+for i in 0..5
+   puts "Valor da variável i: #{i}"  
+end  
+
+Valor da variável i: 0
+Valor da variável i: 1
+Valor da variável i: 2
+Valor da variável i: 3
+Valor da variável i: 4
+Valor da variável i: 5
+=> 0..5
+
+Ex4:
+# utilização de múltiplos
+for i in (0..10).step(2)
+   puts "Valor da variável i: #{i}"
+end  
+
+Valor da variável i: 0
+Valor da variável i: 2
+Valor da variável i: 4
+Valor da variável i: 6
+Valor da variável i: 8
+Valor da variável i: 10
+=> 0..10
+
+Ex5:
+# break: comando para parar a execução
+for i in (0..5)
+   if i > 2
+     break		
+   end  
+   puts "Valor da variável i: #{i}"  
+end  
+
+Valor da variável i: 0
+Valor da variável i: 1
+Valor da variável i: 2
+=> nil
+
+Ex6
+# redo: força o programa a executar a próxima instrução, entra num looping 
+
+for i in (0..5)
+   if i < 2
+     puts "Valor da variável i: #{i}" 
+     redo
+   end			
+end  
+
+Ex7:
+# retry: força o ruby a tentar executar novamente, no inicio informa que pode ocorrer um erro no código, nesse exemplo vai ficar em looping infinito.
+
+for i in (0..5)
+   begin
+     puts "Valor da variável i: #{i}" 
+     2/i
+   rescue
+     retry
+   end
+end

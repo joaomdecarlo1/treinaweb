@@ -1,0 +1,26 @@
+﻿ESTRUTURA DE REPETIÇÃO
+
+- HASHES
+
+# Hashes, também conhecidos como maps, dicionários ou arrays associativas, são similares a arrays no sentido de serem coleções indexadas de objetos. Entretanto, enquanto a indexação de um array só pode ser realizada com um número inteiro, você pode usar qualquer objeto para indexar um hash: strings, números, símbolos, expressões regulares, etc. Ao armazenar o valor em um hash, informa-se dois objetos: o índice, normalmente chamado de chave (key) e o valor a ser armazenado com essa chave. Pode-se então recuperar o valor posteriormente consultando o hash com a chave utilizada para armazená-lo.
+O exemplo a seguir usa literais de hashes, uma lista de chaves e valores delimitados por um par de abre e fecha chaves:
+
+Ex:
+h = { 'dog' => 'canine', 'cat' => 'feline', 'donkey' => 'asinine' }
+h.length       # => 3
+h['dog']       # => "canine"
+h['cow'] = 'bovine'
+h[12] = 'dodecine'
+h['cat'] = 99
+h         # => {"dog"=>"canine", "cat"=>99,
+                              "donkey"=>"asinine",
+                              "cow"=>"bovine", 12=>"dodecine"}
+
+# No exemplo anterior, as chaves eram strings. Se quisermos escrever o mesmo exemplo, mas usando símbolos como chaves, podemos fazer:
+
+Ex: h = { dog: 'canine', cat: 'feline', donkey: 'asinine' }
+
+Resultado:
+h = { :dog => 'canine', :cat => 'feline', :donkey => 'asinine' }
+
+# Comparado a arrays, hashes tem uma vantagem significante: podem usar qualquer tipo de objeto como índice. Assim como arrays, hashes possuem um vasto número de métodos que podem nos ajudar a manipular coleções de dados de maneira eficiente e elegante.

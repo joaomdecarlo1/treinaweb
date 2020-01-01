@@ -1,0 +1,57 @@
+﻿ESTRUTURA DE REPETIÇÃO
+
+- LAÇO WHILE
+# O laço while executa o bloco de código associado zero ou mais vezes enquanto o valor condicional avaliado for verdadeiro. Por exemplo, este é um idioma comum em Ruby para ler os valores de entrada do usuário:
+
+Ex1:
+while line = gets
+  # faz alguma coisa com line
+end
+
+Ex2:
+# diferente do for o while não auto-incrementa automaticamente
+x = 0
+while (x<5)
+   puts "Valor de x: #{x}"
+   x = x + 1
+end  
+
+Valor de x: 0
+Valor de x: 1
+Valor de x: 2
+Valor de x: 3
+Valor de x: 4
+
+Ex3:
+# retornará o mesmo resultado que o exemplo anterior
+x = 0
+ begin
+   puts "Valor de x: #{x}"  
+   x = x + 1  
+ end while x < 5  
+
+Valor de x: 0
+Valor de x: 1
+Valor de x: 2
+Valor de x: 3
+Valor de x: 4
+
+Ex: 4
+# Diferença entre o Ex3 e Ex4, é que no primeiro caso pelo menos o zero será executado no segundo não.
+
+x = 0
+begin
+  puts "Valor de x: #{x}"
+  x = x + 1
+end while x < 0
+
+=> Valor de x: 0
+=> nil
+
+x = 0
+while x < 0
+  puts "Valor de x: #{x}"
+  x = x + 1
+end
+
+=> nil

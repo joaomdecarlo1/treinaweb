@@ -1,0 +1,48 @@
+﻿ESTRUTURA DE REPETIÇÃO
+
+- LAÇO UNTIL (semelhante ao UNLESS)
+# DIFERENTE DO WHILE QUE EXECUTA UMA INSTRUÇÃO ENQUANTO FOR VERDADEIRA, O UNTIL EXECUTA UMA INSTRUÇÃO ENQUANTO FOR FALSO, PODENDO SIMULAR COM O NOT
+
+# O laço until funciona de forma oposta ao laço while: ele executa o bloco até que a condição se torne verdadeira. Por exemplo:
+
+Ex1:
+total = 25
+until (total <= 0) do
+#faz alguma coisa com total
+  total = total - 5
+  puts total
+end
+
+=> 20
+=> 15
+=> 10
+=> 5
+=> 0
+=> nil   
+
+Ex2:
+x = 0
+until (x>=5) do		# enquanto essa condição for falsa
+  puts "Valor da variável x: #{x}"
+  x = x + 1
+end
+
+Valor da variável x: 0
+Valor da variável x: 1
+Valor da variável x: 2
+Valor da variável x: 3
+Valor da variável x: 4
+=> nil
+
+Ex3:
+x = 0
+begin
+  puts "Valor da variável x: #{x}"
+  x = x + 1
+end until (x>=4)
+
+Valor da variável x: 0
+Valor da variável x: 1
+Valor da variável x: 2
+Valor da variável x: 3
+=> nil
